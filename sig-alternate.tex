@@ -1,0 +1,287 @@
+% This is "sig-alternate.tex" V2.0 May 2012
+% This file should be compiled with V2.5 of "sig-alternate.cls" May 2012
+%
+% This example file demonstrates the use of the 'sig-alternate.cls'
+% V2.5 LaTeX2e document class file. It is for those submitting
+% articles to ACM Conference Proceedings WHO DO NOT WISH TO
+% STRICTLY ADHERE TO THE SIGS (PUBS-BOARD-ENDORSED) STYLE.
+% The 'sig-alternate.cls' file will produce a similar-looking,
+% albeit, 'tighter' paper resulting in, invariably, fewer pages.
+%
+% ----------------------------------------------------------------------------------------------------------------
+% This .tex file (and associated .cls V2.5) produces:
+%       1) The Permission Statement
+%       2) The Conference (location) Info information
+%       3) The Copyright Line with ACM data
+%       4) NO page numbers
+%
+% as against the acm_proc_article-sp.cls file which
+% DOES NOT produce 1) thru' 3) above.
+%
+% Using 'sig-alternate.cls' you have control, however, from within
+% the source .tex file, over both the CopyrightYear
+% (defaulted to 200X) and the ACM Copyright Data
+% (defaulted to X-XXXXX-XX-X/XX/XX).
+% e.g.
+% \CopyrightYear{2007} will cause 2007 to appear in the copyright line.
+% \crdata{0-12345-67-8/90/12} will cause 0-12345-67-8/90/12 to appear in the copyright line.
+%
+% ---------------------------------------------------------------------------------------------------------------
+% This .tex source is an example which *does* use
+% the .bib file (from which the .bbl file % is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission, you *NEED* to 'insert'
+% your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+% ================= IF YOU HAVE QUESTIONS =======================
+% Questions regarding the SIGS styles, SIGS policies and
+% procedures, Conferences etc. should be sent to
+% Adrienne Griscti (griscti@acm.org)
+%
+% Technical questions _only_ to
+% Gerald Murray (murray@hq.acm.org)
+% ===============================================================
+%
+% For tracking purposes - this is V2.0 - May 2012
+
+\documentclass{sig-alternate}
+\pdfpagewidth=8.5truein
+\pdfpageheight=11truein
+\usepackage{listings}
+
+\begin{document}
+%
+% --- Author Metadata here ---
+\conferenceinfo{RACS'15}{October 9-12, 2015, Prague, Czech Republic.}
+\CopyrightYear{2015} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
+\crdata{0-12345-67-8/15/10}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
+% --- End of Author Metadata ---
+
+\title{Alternate {\ttlit ACM} SIG Proceedings Paper in LaTeX
+Format}
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
+
+\numberofauthors{2} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+Michal Trnka\\
+       \affaddr{Dept. of Computer Science and Engineering}\\
+       \affaddr{Czech Technical University}\\
+       \affaddr{Technick\'a 2, 166 27 Praha, Czech Republic}\\
+       \email{trnkami1@fel.cvut.cz}
+% 2nd. author
+\alignauthor
+Tomas Cerny\\
+       \affaddr{Dept. of Computer Science and Engineering}\\
+       \affaddr{Czech Technical University}\\
+       \affaddr{Technick\'a 2, 166 27 Praha, Czech Republic}\\
+       \email{tomas.cerny@fel.cvut.cz}
+}
+% There's nothing stopping you putting the seventh, eighth, etc.
+% author on the opening page (as the 'third row') but we ask,
+% for aesthetic reasons that you place these 'additional authors'
+% in the \additional authors block, viz.
+\date{30 July 1999}
+% Just remember to make sure that the TOTAL number of authors
+% is the number that will appear on the first page PLUS the
+% number that will appear in the \additionalauthors section.
+
+\maketitle
+\begin{abstract}
+Security of applications is very challenging and extensive problem. To keep with the trend of personalized applications and with increased interest in context aware applications it needs to be adapted for those applications. It this paper I present how to add context awareness elements into role based access control. I describe already existing solutions and point out their key ideas and I propose own solution, which is very lightweight, universal and allows instant enhancement of current RBAC even in current applications. The solution is based on security levels, which are assigned to users based on context. Security levels represents how the users can be trusted and are determined during users login procedure. The levels are used as additional security constrain so to access resources in application user need to have not only right permission granted through roles, but also to have corresponding level.
+\end{abstract}
+
+% A category with the (minimum) three required fields
+\category{D.2.0}{Software Engineering}{Protection mechanisms}
+
+\terms{Design, Security, Theory}
+
+\keywords{Role-based access control, Context-aware security, Security levels}
+
+\section{Introduction}
+Contemporary applications move toward context-awareness (CA) \cite{context,tomas1}. It is caused by emerge of the amount of the mobile technologies \cite{mobilecontext}, as well as by the users demand for personalized applications. Applications provide personalized content based on user's context or the application's context \cite{personalizedcontext}. That brings completely new experience for the applications operators and to users. However, securing the applications is done the old way. Usually, users are assigned various roles in applications or permissions for resources and security rules are independent on context. There is only a few applications, which has security based on context. We can expect that users and application owners would take advantage of application security that bases on context to provide specific resource access based on context.
+
+Applications using Context-Aware Security (CAS) can be much less obtrusive for users. They can be asked for different authentication methods based on context, they can be authorized for same resource various ways depending on their context. For example access from Prague can have different access rights then access from Brno. They can even sometimes omit authentication because their context is trustworthy by itself (e.g. access from inner company network). Similar to users, also application operators can profit from the context-based authentication. They might define more strict security rules for suspicious users behavior (e.g. Internet access to system confidential resources at night). Using context allows system administrators for more fine-grained security rules, which would be otherwise tangle through multiple rules and make them unsustainable for maintenance. 
+
+Application operators and software developers are well aware of the added value of CAS. Even thought, there exist proposals how to do CAS none of them is widely used \cite{grbac,envroles,contextroles,contextaccess,contextawarerbac,xorbac,genericcontext,ubiscom,hung,wendong,eacl,contextAwareMobile}. The reason why they are not widely used is that they are either too complex to use or they are too innovative, requiring complete system redesign, which is hard to incorporate into existing solutions.
+
+In this paper we propose solution, which extends standard RBAC security architecture with CA elements. This extension bases on users security levels that consider their context. To access resources require the user to posses particular level in addition to his/her usual access rights. This proposal allows extension to various security architectures with CA elements.
+
+\section{Background}
+Large applications or information systems, which has more then one user, needs some form of authentication and authorization. Such systems exist for many decades and are almost as old as computers itself. For example, proposal for information system called Memex is mentioned in 1945 \cite{memex}. Therefore for many decades there exists problem with security of applications and it was addressed various ways.
+
+Two of the oldest principles for securing application resources are Mandatory Access Control (MAC) \cite{accesscontrol} and Discretionary Access Control (DAC) \cite{accesscontrol}. Those two principles does not define how the application security should be implemented, but rather define core principles in authorization. In MAC there exists an authority that has the responsibility to grant permissions to access all resources. On the contrary, in DAC, the permission can be granted by anyone with sufficient permission for the resource.
+
+However, granting permissions to every user in the system is unpractical for larger amount of users. Role-based access control (RBAC) \cite{rbac} provides another level of abstraction. It has the approach that permission is given to an abstract role and users are assigned these roles. Usually, there exists fewer roles than permissions in the system and the roles do not change significantly over time unlike users.
+
+Nevertheless, these authorization principles and methods are static. They do not reflect changing state of the system and users. Once they are set, they do not take in account any other factors and any fine tuning becomes difficult.
+
+CAS can overcome these difficulties and even provide new experience for users and application operators. CA applications are much more personalized then the static ones and the same comes for the security. Application can get a lot of information about user from the context and therefore it does not require users to provide additional information. For instance, if application has the knowledge of user's usual IP address then connecting from another IP can be viewed as suspicious. The application context is also valuable source of information for application owner. For example, the owner might restrict certain range of IP addresses, times of the day, etc., to access resources in the application. 
+
+With emerge of the CA applications, there is naturally need of CAS. The idea of CA applications exists since 90's \cite{contextaware}. Such CA applications adapts according to the user location and access times, the collection of nearby people, hosts, accessible devices, etc., as well as to changes to such things over time. A system with these capabilities can examine the user's environment, compute it and react to changes to the environment. Naturally, such application needs security architecture, which adopts all of the above-mentioned principles to be fully CA. However there is a significant lack of standardized methods or best practices how to address the CAS.
+
+To illustrate how can CAS improve applications consider the following example. Let us consider an information system in a company. To make it more comfortable, we let users from inner company network access noncritical resources. But if the user comes from Internet or access some sensitive resources, he/she needs to authenticate. Not only users would benefit from it. CAS can determine suspicious users behavior. For example, when user logs into the system in short time frame from different parts of the world it can raise the flag and report the incident for further investigation. Furthermore, the company can set access hours for various resources, such as orders, to limit possibility of their abuse (for example restrict access in non-working hours, to plan the next day delivery).
+
+\section{Related Work}
+There has been multiple attempts to extend classic RBAC with CA elements as well as to make RBAC more fine-grained.
+
+One of the approaches is to add another set of roles to RBAC. Moyer et. al. \cite{grbac} proposes creating two additional sets of object roles and environmental roles and tying permissions with trio of roles. Covington et. al. \cite{envroles} simplify that to just one additional set of environmental roles. They are hierarchical composed and represent current state of system. Similarly to this approach Seon-Ho et. al. \cite{contextroles} suggests additional set of context roles. However creating completely new set (or sets) of roles increases design and computational complexity and therefore reduces advantages of RBAC.
+
+Different solution proposes Sladi\'c et. al. \cite{contextaccess}. Roles are granted to user after his authentication based on context. That way user can obtain new roles which are reflecting his context. The idea is further developed by Kulkarni et. al. \cite{contextawarerbac} into Context-Aware RBAC. It also allows roles to be granted based on context but there is second layer of authorization architecture, which is responsible for granting and revoking roles when the context changes and therefore roles are dynamically reflecting context. Problem with that solution is that it can not be mixed with traditional RBAC. Once the system starts assigning roles based on context all authorization rules are affected. 
+%Mas napad jak pekne popsat ze to je nachylny na ruzne zmeny co se udelaji v pridelovani roli podle kontextu, ale zapomene se to propagovat do toho jaky role to maji povoleny?
+
+There is also possibility to solve that problem with adding another element not based on roles. Neumann et. al. \cite{xorbac} suggests adding context constraints to security policies. When the permission is checked user needs to posses not only the permission for the resource (based on his role) but also fulfill context constraints. Similar approach by Most\'efaoui et. al. \cite{genericcontext} proposes that security rules should consist of four elements - permission, role, context and authentication method. Nevertheless defining context constraints for every permission would be very difficult, hard to maintain and it would repeat over without any form of their abstraction and aggregation. Also they do not describe how to define context constrains itself and how to check context during the authorization process and what is the performance of their proposal in real application.
+
+Lima et. al. \cite{contextlayer} adds another context dimension to current security rules. It would make security policy three dimensional with context, permission and role. Difference from xoRBAC \cite{xorbac} is that it takes context more abstractly and complexly. Corrad et. al. \cite{ubiscom} suggest leave the roles completely and assign permissions to contexts. Both those approaches are interesting in that they consider and compare contexts to make decisions on how similar they are. However they do not mention how should be contexts compared and how is the context similarity defined, also permanent context checking might consume significant amount of application resources. Mowafi et. al. \cite{contextAwareMobile} in his paper describes solution for mobile applications where every service in application should run in sandbox, which would be responsible for determining security rights based on contexts and security rules.
+
+Remarkable idea is proposed by Hung et. al. \cite{hung} He proposes three entities in security rules - object, user and activity. All of the entities have some credentials. If user want to perform action on object he needs to poses credentials required for both object and activity. This approach is not connected with RBAC, still it can provide some interesting ideas, which might be used in RBAC.
+
+Another interesting idea is described by Wendong et. al. \cite{wendong} He suggests adding user security level in addition to RBAC and define needed security levels to perform actions. Idea is with adding security levels is very interesting in connection to this paper, however he grants the security level manually to user and not based on context.
+
+Neuman et. al. \cite{eacl} shows very interesting and complex approach to extend Access Control Lists (ACL). In his paper he describes multiple conditions including context constrains and the way they should be enforced on objects. An object is protected with access rights, which can be both positive or negative and with optional set of associated conditions. Even thought he describes the solution for ACL many of his proposals can be used in any security concept including RBAC.
+
+\section{Proposed Solution}
+Security policies in organizations are very consistent and are changing just slightly over time. Most of the organizations does not want or does not even need to apply any radical changes. Therefore CAS must be another logical step to evolve current security. This will allow us to build new security rules on existing and well proved solution and it also makes the solution more accessible for people who are familiar with current solutions.
+
+We propose creation of a security level, which is based on context in addition to traditional roles in RBAC. Level can be understood as quantification how is the user trustworthy and it is dynamically tied to user. The security level creates second security constraint beside traditional permission and therefore resources in application now can have two different kind of security rules - classic permission tied with role and security level.
+
+\lstset{language=Java, caption={Example of using security levels for securing resources}, label=Example of usage, 
+stringstyle=\ttfamily, 
+basicstyle=\small\ttfamily,                      
+showspaces=false,   
+basewidth={0.55em,0.4em},            
+showstringspaces=false,         
+showtabs=false,                 
+frame=single,	                
+tabsize=2,	
+captionpos=b,               
+breaklines=true,    
+belowskip=1em,        
+xleftmargin=0em,        
+xrightmargin=0em,        
+breakatwhitespace=false}
+
+
+ 
+\begin{lstlisting}[]
+  @AllowedRoles('admin','manager')
+  @RequiresLevel(3)
+  public Resource getResource(int Id){
+  ...
+  }
+                
+\end{lstlisting}
+
+As the context of the user and the application is changing, the level needs to reflect the dynamic nature of context. There are several moments when the level can be calculated. First moment is to calculate the level during user's account creation. However, this does not reflect the dynamic nature of context and therefore is unsuitable for our needs. The opposite extreme is to determine the level on every authorization request. This would reflect changing context most reliably but it is too demanding for computational resources and also time consuming, as the context check might not be trivial. As the best compromise seems to determine the level during user's log in into application. It decreases number of context checks by several orders and at the same time it provides very accurate snapshot of the user's context. In cases when the context changes rapidly, the user can perform relogin or even the application can enforce a new level calculation manually.
+
+The level resolution is achieved by context resolvers. Each resolver takes the responsibility for checking one particular part of context. For example, one resolver would determine network, from which the user comes. Another would check time of the day and so on. Every resolver would return, which level it grants to the user. As the security resolver is written within the application, it has access to users information (e.g. his request, information about him stored in database, etc.), as well as it can use information about the application (e.g. number of requests, number of users). Furthermore, it can even consider the machine the application is running on (e.g. load of the machine, resource usage, location of the server, etc.). The level does not need to be set in resolver and it does not decide just if to grant it or not, the resolver itself makes decision, which level to grant. After every resolver performs its inner logic and determines the level on its own, the highest level is used as the final user's security level.
+
+The level representation by itself is very abstract. It is only necessary for the level to be comparable with other levels to know whether the given level is higher or lower then required one and also to determine the highest one. Therefore it is not important whether number, string or even some more complex structure represents the level. This leaves a lot of space for customization for a given application.
+
+The proposed solution has many advantages. The most important ones are:
+
+\begin{itemize}  
+\setlength{\itemsep}{1pt}
+	 \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+  \item Lightweight - it does not require any complex structures in application nor it does not consume significant system resources. 
+  \item Easy to use - it just requires adding another type of constrain to resources that need to poses CAS.
+  
+  \item Voluntary - if someone wants to use plain RBAC he can and just to chosen resources he might add level restrictions. 
+  
+  \item Scalable - there is not any predefined set of levels nor there is no limit in amount of levels in application.
+  
+  \item Universal - the solution can be modified and used with other security architectures, not just with RBAC.
+\end{itemize}
+
+However the solution poses few limitations, which needs to be worked further on. Among them the most significant are:
+\begin{itemize}
+		\setlength{\itemsep}{1pt}
+	 \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+
+  \item Hard to determine exact context - sometimes can happen that some resource should be accessible just from given context. For example some resources are accessible only during the day and some just during the night. Such scenario is impossible to secure with proposed solution.
+  
+  \item Levels are linear - structure of the levels is strictly linear and therefore it is impossible to build some tree or even more complex structure of levels. Often happen that there are multiple context rules, which are granted different set of right. For example levels can't model geographical situation when users from same state have some rights but people in different location of the state got additional specialized rights.
+\end{itemize}
+
+\section{Case study}
+Popsat apku - obecne co a jak.
+
+Vybrat security important pointy: platit - prihlaseny + trusted, historie - prihlaseny, zmenit adresu - prihlaseny + trusted, zmenit trusted IP - prihlaseny + trusted. trusted - prihlaseny z dany IP nebo overeny po telefonu.
+
+Popsat jak po staru - vsude kde se pouzije trusted se musi overit jestli se prihlasil z dobry IP nebo je overenej SMS kodem. Popsat nutnost svazat kod zjistovani zda je trusted s dalsimi tridami.
+
+Popsat po novu - urcit Level 2 - znamena, ze user je trusted. Popsat level resolvery na jednom miste, agregovane dohromady.
+
+Popsat kolik kodu potreba napsat po staru, jak se to skaluje, popsat exponencialni narust.
+
+Popsat kolik kodu po novu, jak se to skaluje, potencialni nutna pocatecni investice.
+
+\section{Conclusion}
+In this paper we focused on the area of the CAS with focus on RBAC architecture. As is covered by related works the main issue of CAS is no existing standard or efficient best practice solution. There are multiple approaches how to add CA elements into RBAC. However they suffer from multiple inconveniences. They are either too complicated and therefore they significantly decreases one of main advantage of RBAC, which lays in its simplicity to maintain and develop. In some cases they also demands a lot of computational resources or even change the RBAC so extensively that it can be hardly called RBAC anymore.
+
+We introduced a novel approach based on adding another security constraint beside classic permissions tied to roles. The constraint is called security level and it is based on the context. Basically level describes how much user can be trusted. To access resource in application user is required not only to posses permission through roles but also to have corresponding security level. This approach keeps advantages of RBAC and extends them further with CA elements. The solution has few limitations but brings multiple advantages to support CAS. 
+
+In future work we want to focus on transfer of security levels to other security architectures since our preliminary results show the potential and flexibility to utilize the advantages. Apart from that we want to examine options to overcome linearity of the levels and how to model more complex context security constraints and generally reduce downsides of the proposed solution.
+
+%ACKNOWLEDGMENTS are optional
+\section{Acknowledgments}
+Research described in the paper was supported by the
+Grant Agency of the Czech Technical University in Prague, under grant No. SGS14/198/OHK3/3T/13.
+
+%
+% The following two commands are all you need in the
+% initial runs of your .tex file to
+% produce the bibliography for the citations in your paper.
+\bibliographystyle{abbrv}
+\bibliography{sigproc}  % sigproc.bib is the name of the Bibliography in this case
+% You must have a proper ".bib" file
+%  and remember to run:
+% latex bibtex latex latex
+% to resolve all references
+%
+% ACM needs 'a single self-contained file'!
+%
+%APPENDICES are optional
+%\balancecolumns
+
+\end{document}

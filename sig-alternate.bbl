@@ -1,0 +1,140 @@
+\begin{thebibliography}{10}
+
+\bibitem{context}
+G.~D. Abowd, A.~K. Dey, P.~J. Brown, N.~Davies, M.~Smith, and P.~Steggles.
+\newblock Towards a better understanding of context and context-awareness.
+\newblock In {\em Proceedings of the 1st International Symposium on Handheld
+  and Ubiquitous Computing}, HUC '99, pages 304--307, London, UK, UK, 1999.
+  Springer-Verlag.
+
+\bibitem{memex}
+V.~Bush and A.~W.~M. Think.
+\newblock The atlantic monthly.
+\newblock {\em As we may think}, 176(1):101--108, 1945.
+
+\bibitem{ubiscom}
+A.~Corrad, R.~Montanari, and D.~Tibaldi.
+\newblock Context-based access control management in ubiquitous environments.
+\newblock In {\em Network Computing and Applications, 2004. (NCA 2004).
+  Proceedings. Third IEEE International Symposium on}, pages 253--260, Aug
+  2004.
+
+\bibitem{envroles}
+M.~J. Covington, W.~Long, S.~Srinivasan, A.~K. Dev, M.~Ahamad, and G.~D. Abowd.
+\newblock Securing context-aware applications using environment roles.
+\newblock In {\em Proceedings of the Sixth ACM Symposium on Access Control
+  Models and Technologies}, SACMAT '01, pages 10--20, New York, NY, USA, 2001.
+  ACM.
+
+\bibitem{mobilecontext}
+A.~Harter, A.~Hopper, P.~Steggles, A.~Ward, and P.~Webster.
+\newblock The anatomy of a context-aware application.
+\newblock In {\em Proceedings of the 5th Annual ACM/IEEE International
+  Conference on Mobile Computing and Networking}, MobiCom '99, pages 59--68,
+  New York, NY, USA, 1999. ACM.
+
+\bibitem{rbac}
+M.~Hitchens and V.~Varadharajan.
+\newblock Design and specification of role based access control policies.
+\newblock {\em Software, IEE Proceedings -}, 147(4):117--129, Aug 2000.
+
+\bibitem{personalizedcontext}
+J.~Hong, E.-H. Suh, J.~Kim, and S.~Kim.
+\newblock Context-aware system for proactive personalized service based on
+  context history.
+\newblock {\em Expert Systems with Applications}, 36(4):7448 -- 7457, 2009.
+
+\bibitem{hung}
+L.~X. Hung, J.~Hassan, A.~Riaz, S.~Raazi, Y.~Weiwei, N.~Canh, P.~Truc, S.~Lee,
+  H.~Lee, Y.~Son, M.~Fernandes, M.~Kim, and Y.~Zhung.
+\newblock Activity-based security scheme for ubiquitous environments.
+\newblock In {\em Performance, Computing and Communications Conference, 2008.
+  IPCCC 2008. IEEE International}, pages 475--481, Dec 2008.
+
+\bibitem{contextawarerbac}
+D.~Kulkarni and A.~Tripathi.
+\newblock Context-aware role-based access control in pervasive computing
+  systems.
+\newblock In {\em Proceedings of the 13th ACM Symposium on Access Control
+  Models and Technologies}, SACMAT '08, pages 113--122, New York, NY, USA,
+  2008. ACM.
+
+\bibitem{contextlayer}
+J.~Lima, C.~Rocha, I.~Augustin, and M.~Dantas.
+\newblock A context-aware recommendation system to behavioral based
+  authentication in mobile and pervasive environments.
+\newblock In {\em Embedded and Ubiquitous Computing (EUC), 2011 IFIP 9th
+  International Conference on}, pages 312--319, Oct 2011.
+
+\bibitem{tomas1}
+M.~Macik, T.~Cerny, and P.~Slavik.
+\newblock Context-sensitive, cross-platform user interface generation.
+\newblock {\em Journal on Multimodal User Interfaces}, 8(2):217--229, 2014.
+
+\bibitem{genericcontext}
+G.~Mostéfaoui and P.~Brézillon.
+\newblock A generic framework for context-based distributed authorizations.
+\newblock In P.~Blackburn, C.~Ghidini, R.~Turner, and F.~Giunchiglia, editors,
+  {\em Modeling and Using Context}, volume 2680 of {\em Lecture Notes in
+  Computer Science}, pages 204--217. Springer Berlin Heidelberg, 2003.
+
+\bibitem{contextAwareMobile}
+Y.~Mowafi, D.~Abou-Tair, T.~Aqarbeh, M.~Abilov, V.~Dmitriyev, and J.~M. Gomez.
+\newblock A context-aware adaptive security framework for mobile applications.
+\newblock In {\em Proceedings of the 3rd International Conference on
+  Context-Aware Systems and Applications}, ICCASA '14, pages 147--153, ICST,
+  Brussels, Belgium, Belgium, 2014. ICST (Institute for Computer Sciences,
+  Social-Informatics and Telecommunications Engineering).
+
+\bibitem{grbac}
+M.~Moyer and M.~Abamad.
+\newblock Generalized role-based access control.
+\newblock In {\em Distributed Computing Systems, 2001. 21st International
+  Conference on.}, pages 391--398, Apr 2001.
+
+\bibitem{xorbac}
+G.~Neumann and M.~Strembeck.
+\newblock An approach to engineer and enforce context constraints in an rbac
+  environment.
+\newblock In {\em Proceedings of the Eighth ACM Symposium on Access Control
+  Models and Technologies}, SACMAT '03, pages 65--79, New York, NY, USA, 2003.
+  ACM.
+
+\bibitem{contextroles}
+S.-H. Park, Y.-J. Han, and T.-M. Chung.
+\newblock Context-role based access control for context-aware application.
+\newblock In M.~Gerndt and D.~Kranzlmüller, editors, {\em High Performance
+  Computing and Communications}, volume 4208 of {\em Lecture Notes in Computer
+  Science}, pages 572--580. Springer Berlin Heidelberg, 2006.
+
+\bibitem{eacl}
+T.~Ryutov and C.~Neuman.
+\newblock The specification and enforcement of advanced security policies.
+\newblock In {\em Policies for Distributed Systems and Networks, 2002.
+  Proceedings. Third International Workshop on}, pages 128--138, 2002.
+
+\bibitem{accesscontrol}
+R.~Sandhu.
+\newblock Access control: The neglected frontier.
+\newblock In J.~Pieprzyk and J.~Seberry, editors, {\em Information Security and
+  Privacy}, volume 1172 of {\em Lecture Notes in Computer Science}, pages
+  219--227. Springer Berlin Heidelberg, 1996.
+
+\bibitem{contextaware}
+B.~Schilit, N.~Adams, and R.~Want.
+\newblock Context-aware computing applications.
+\newblock In {\em Mobile Computing Systems and Applications, 1994. WMCSA 1994.
+  First Workshop on}, pages 85--90, Dec 1994.
+
+\bibitem{contextaccess}
+G.~Sladi{\'c}, B.~Milosavljevi{\'c}, and Z.~Konjovi{\'c}.
+\newblock Context-sensitive access control model for business processes.
+\newblock {\em Computer Science and Information Systems}, 10(3):939--972, 2013.
+
+\bibitem{wendong}
+Z.~Wendong and Z.~Kaiji.
+\newblock A role-based workflow access control model.
+\newblock In {\em Education Technology and Computer Science, 2009. ETCS '09.
+  First International Workshop on}, volume~2, pages 1136--1139, March 2009.
+
+\end{thebibliography}
