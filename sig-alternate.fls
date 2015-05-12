@@ -67,6 +67,12 @@ INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/xcolor.sty
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
 INPUT sig-alternate.aux
 INPUT sig-alternate.aux
 OUTPUT sig-alternate.aux
@@ -102,6 +108,7 @@ INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aett.fd
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aett.fd
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/ae/aett8.tfm
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/ae/aett9.tfm
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/ae/aer6.tfm
 INPUT sig-alternate.bbl
 INPUT sig-alternate.bbl
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/ae/aeti9.tfm

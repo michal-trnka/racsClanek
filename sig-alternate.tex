@@ -49,6 +49,9 @@
 \pdfpagewidth=8.5truein
 \pdfpageheight=11truein
 \usepackage{listings}
+\usepackage{array}
+\usepackage{xcolor}
+\newcommand\todo[1]{\textcolor{red}{#1}}
 
 \begin{document}
 %
@@ -246,9 +249,23 @@ However the solution poses few limitations, which needs to be worked further on.
 \section{Case study}
 To demonstrate proposed solution we conduct a small case study. We implement a functional mock of e-shop with multiple actions and different security rules. User without any form of authentication is able to browse items in shop and add them to a cart. User who has logged in using his login and password can view his order history and delivery address. And finally there is third level of authentication, lets call user possessing it 'verified user', which allows user to change his delivery address and to pay for the purchase. This level is obtained by additional authentication done by one of two ways. The first possibility is to use specially generated code, delivered to phone by SMS. Second possibility is, that user can set trusted IP address (it can be set only if the user is already verified) and if he logs in from that IP address he is automatically considered verified.
 
-Vybrat security important pointy: platit - prihlaseny + trusted, historie - prihlaseny, zmenit adresu - prihlaseny + trusted, zmenit trusted IP - prihlaseny + trusted. trusted - prihlaseny z dany IP nebo overeny po telefonu. 1. Napsat, ze existujou a jsou v tabulce. Vysvetlit proc je dulezity je identifikovat a napsat, ze v real aplikaci je jich mnohem vic.
+In every application is important to know what are the operations that user might do and then determine security rules for them. In the showcase application is multiple actions, which is user allowed to perform on different authentication levels. This is shown in Table 1. It also shows how the level can be obtained. You can see that security rights are simple for our application, however for real application they most likely will be very complicated.
 
-Popsat kam se implementovali levely, a ze aplikace je napsana v Java EE, atd, atd.
+\begin{table}
+\centering
+\caption{\todo{Predelat tabulku}User's status and allowed actions}
+\begin{tabular}{|m{2cm}|m{2.5cm}|m{3cm}|} \hline
+User's status&Actions&Obtained\\ \hline
+none & browse e-shop & default\\ \hline
+logged in & view order \newline history & username/pwd\\ \hline
+ &  Pay for purchase & SMS code verification \\ 
+verified & Change delivery address &  \\ 
+ & Set trusted IP & Access from set IP address\\ 
+\hline\end{tabular}
+\end{table}
+
+To demonstrate difference and effectiveness in our novel approach we implement application describe above twice. Once using levels and once using traditional methods. Levels are implemented in Java EE and integrated into PicketLink\footnote{http://picketlink.org/} framework. Therefore both implementation of application are also build on top of Java EE specifications.
+
 
 Popsat jak po staru - vsude kde se pouzije trusted se musi overit jestli se prihlasil z dobry IP nebo je overenej SMS kodem. Popsat nutnost svazat kod zjistovani zda je trusted s dalsimi tridami.
 
