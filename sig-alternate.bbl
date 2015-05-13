@@ -72,7 +72,7 @@ M.~Macik, T.~Cerny, and P.~Slavik.
 \newblock {\em Journal on Multimodal User Interfaces}, 8(2):217--229, 2014.
 
 \bibitem{genericcontext}
-G.~Mostéfaoui and P.~Brézillon.
+G.~K. Most{\'e}faoui and P.~Br{\'e}zillon.
 \newblock A generic framework for context-based distributed authorizations.
 \newblock In P.~Blackburn, C.~Ghidini, R.~Turner, and F.~Giunchiglia, editors,
   {\em Modeling and Using Context}, volume 2680 of {\em Lecture Notes in
@@ -103,7 +103,7 @@ G.~Neumann and M.~Strembeck.
 \bibitem{contextroles}
 S.-H. Park, Y.-J. Han, and T.-M. Chung.
 \newblock Context-role based access control for context-aware application.
-\newblock In M.~Gerndt and D.~Kranzlmüller, editors, {\em High Performance
+\newblock In M.~Gerndt and D.~Kranzlm{\"u}ller, editors, {\em High Performance
   Computing and Communications}, volume 4208 of {\em Lecture Notes in Computer
   Science}, pages 572--580. Springer Berlin Heidelberg, 2006.
 
@@ -130,6 +130,11 @@ B.~Schilit, N.~Adams, and R.~Want.
 G.~Sladi{\'c}, B.~Milosavljevi{\'c}, and Z.~Konjovi{\'c}.
 \newblock Context-sensitive access control model for business processes.
 \newblock {\em Computer Science and Information Systems}, 10(3):939--972, 2013.
+
+\bibitem{cohesionCoupling}
+W.~P. Stevens, G.~J. Myers, and L.~L. Constantine.
+\newblock Structured design.
+\newblock {\em IBM Syst. J.}, 13(2):115--139, June 1974.
 
 \bibitem{wendong}
 Z.~Wendong and Z.~Kaiji.

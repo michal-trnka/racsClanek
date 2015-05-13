@@ -266,14 +266,43 @@ verified & Change delivery address &  \\
 
 To demonstrate difference and effectiveness in our novel approach we implement application describe above twice. Once using levels and once using traditional methods. Levels are implemented in Java EE and integrated into PicketLink\footnote{http://picketlink.org/} framework. Therefore both implementation of application are also build on top of Java EE specifications.
 
+\todo{Predelat @LoggedIn na HasRole? Nebo to vysvetlit v textu, proc tam nemame zadny role?}
+\lstset{language=Java, caption={Method secured traditional way}, label=Traditional way}
+\begin{lstlisting}[]
+@LoggedIn
+public void makeOrder(Order o) throws NotTrustedUserException{
+    if(!ipCheck.isIpTrusted()&&!smsCheck.isSmsVerified()){
+      throw new NotTrustedUserException();
+    }
+    ...
+}          
+\end{lstlisting}
 
-Popsat jak po staru - vsude kde se pouzije trusted se musi overit jestli se prihlasil z dobry IP nebo je overenej SMS kodem. Popsat nutnost svazat kod zjistovani zda je trusted s dalsimi tridami.
+In implementation without using levels needs to be code determining trusted user manually included in every method requiring, which requires user to be verified. As Listing 2 shows it brings few lines of unrelated code into those methods as well as new declaration of thrown exception.
 
-Popsat po novu - urcit Level 2 - znamena, ze user je trusted. Popsat level resolvery na jednom miste, agregovane dohromady.
+\todo{Predelat @LoggedIn na HasRole? Nebo to vysvetlit v textu, proc tam nemame zadny role?}
+\lstset{language=Java, caption={Method secured with levels}, label=Secured with levels}
+\begin{lstlisting}[]
+@LoggedIn
+@RequiresLevel('2')
+public void makeOrder(Order o){
+    ...
+}          
+\end{lstlisting}
 
-Popsat kolik kodu potreba napsat po staru, jak se to skaluje, popsat exponencialni narust.
+In Listing 3 you can clearly see that method using security levels is significantly shorter and does not have any unrelated code inside. Therefore it increases cohesion \cite{cohesionCoupling} of method and in the same time reduces coupling \cite{cohesionCoupling}. The class 'IpCheck' has been changed to level resolver, which reduces dependencies, because all resolvers are invoked automatically during log in. The class SmsCheck was deleted completely, because the framework allows setting up level on authenticator as is shown in Listing 4.
 
-Popsat kolik kodu po novu, jak se to skaluje, potencialni nutna pocatecni investice.
+\lstset{language=Java, caption={Authenticator for SMS verification}, label=SMS authenticator}
+\begin{lstlisting}[]
+@SecurityLevel("2")
+public class SmsAuthenticator extends BaseAuthenticator {
+...
+}
+\end{lstlisting}
+
+You can clearly see that approach with levels adds to code of secured methods just one line with annotation. In addition it keeps code for determining level separated from business logic of the application and therefore allows faster development once the levels are programmed and easier maintenance and testing of the code. Without using levels there needs to be a condition for every possibility how to obtain given level. Therefore complexity of the code is unnecessary increased. Even if the security rules were extracted to another class it would add one more dependence for given class. The proposed solution can also decrease number of total classes in application because some levels are determined automatically by annotations (e.g. over authenticators).
+
+In given example the implementation with levels removes 3 lines of code and exception declaration while adding one annotation in half of the secured methods. It also removes one class completely (while adding one annotation to authenticator) and second class is changed and there are no dependencies to it. It is obvious that with more complicated application the benefit will be even more significant.
 
 \section{Conclusion}
 In this paper we focused on the area of the CAS with focus on RBAC architecture. As is covered by related works the main issue of CAS is no existing standard or efficient best practice solution. There are multiple approaches how to add CA elements into RBAC. However they suffer from multiple inconveniences. They are either too complicated and therefore they significantly decreases one of main advantage of RBAC, which lays in its simplicity to maintain and develop. In some cases they also demands a lot of computational resources or even change the RBAC so extensively that it can be hardly called RBAC anymore.
