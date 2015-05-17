@@ -136,6 +136,12 @@ W.~P. Stevens, G.~J. Myers, and L.~L. Constantine.
 \newblock Structured design.
 \newblock {\em IBM Syst. J.}, 13(2):115--139, June 1974.
 
+\bibitem{concernSeparation}
+P.~Tarr, H.~Ossher, W.~Harrison, and S.~M. Sutton, Jr.
+\newblock N degrees of separation: Multi-dimensional separation of concerns.
+\newblock In {\em Proceedings of the 21st International Conference on Software
+  Engineering}, ICSE '99, pages 107--119, New York, NY, USA, 1999. ACM.
+
 \bibitem{wendong}
 Z.~Wendong and Z.~Kaiji.
 \newblock A role-based workflow access control model.
