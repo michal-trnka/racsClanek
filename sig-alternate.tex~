@@ -129,7 +129,7 @@ Tomas Cerny\\
 
 \maketitle
 \begin{abstract}
-Security of software applications is very challenging and extensive topic. To keep up with the trend of personalized context aware applications the security design must adapt to it. This paper presents context awareness into the role based access control. We describe already existing solutions, point out their key ideas and propose our lightweight universal extension. It is universal and allows instant enhancement of current RBAC even in current applications. The proposed solution bases on security levels, which are assigned to users based on context. Security levels represents how the users can be trusted and are determined during login procedure. The levels are used as additional security constraints to access resources. In application the user needs to posses not only right permission granted through RBAC roles, but also to have a corresponding level.
+Security of software applications is very challenging and extensive topic. To keep up with the trend of personalized context aware applications the security design must adapt to it. This paper presents context awareness into the role based access control. We describe already existing solutions, point out their key ideas and propose our RBAC lightweight extension. It is universal and allows instant enhancement of current RBAC even in current applications. The proposed solution bases on security levels, which are assigned to users based on context. Security levels represents how the users can be trusted and they are determined during login procedure. The levels are used as additional security constraints to access resources. In application the user needs to posses not only right permission granted through RBAC roles, but also to have a corresponding level.
 \end{abstract}
 
 % A category with the (minimum) three required fields
@@ -140,7 +140,7 @@ Security of software applications is very challenging and extensive topic. To ke
 \keywords{Role-based access control, Context-aware security, Security levels}
 
 \section{Introduction}
-Contemporary applications move toward context-awareness (CA) \cite{context,tomas1}. It is caused by emerge of the amount of the mobile technologies \cite{mobilecontext}, as well as by the users demand for personalized applications. Applications provide personalized content based on user's or the application's context \cite{personalizedcontext}. This brings completely new experience for the applications operators and users. However, the security design fails to consider context-awareness. Usually, users are assigned various roles in applications or permissions for resources and security rules are independent of the context. There is only a few applications, which has security based on context. We can expect that users and application owners would take advantage of application security that bases on context to provide specific resource access based on context.
+Contemporary applications move toward context-awareness (CA) \cite{context,tomas1}. It is caused by emerge of the amount of the mobile technologies \cite{mobilecontext}, as well as by the users demand for personalized applications. Applications provide personalized content based on user's or the application's context \cite{personalizedcontext}. This brings completely new experience for the applications operators and users. However, the security design fails to consider context-awareness. Usually, users are assigned various roles in applications or permissions for resources and security rules are independent of the context. There is only a few applications, which has security based on context (e.g. Google provides content based on history and Facebook required additional authentication if logged from unusual place). We can expect that users and application owners would take advantage of application security that bases on context to provide specific resource access based on context.
 
 Applications using Context-Aware Security (CAS) can be much less obtrusive for users. They can be asked for different authentication methods based on context, they can be authorized for same resource various ways depending on their context. For example, access from Prague can have different access rights then access from Brno. They can even sometimes omit authentication because their context is trustworthy by itself (e.g. access from inner company network). Similar to users, also application operators can profit from the context-based authentication. They might define more strict security rules for suspicious users behavior (e.g. Internet access to system confidential resources at night). Using context allows system administrators to define more fine-grained security rules, which would be otherwise tangle through multiple rules and make them unsustainable for maintenance. 
 
@@ -182,7 +182,7 @@ Another interesting idea is described by Wendong et. al. \cite{wendong} He sugge
 Neuman et. al. \cite{eacl} shows very interesting and complex approach to extend Access Control Lists (ACL). In his paper he describes multiple conditions including context constrains and the way they should be enforced on objects. An object is protected with access rights, which can be both positive or negative and with optional set of associated conditions. Even thought he describes the solution for ACL many of his proposals can be used in any security concept including RBAC.
 
 \section{Proposed Solution}
-Security policies in organizations are very consistent and are changing just slightly over time. Most of the organizations do not want or do not need to apply any radical changes. Therefore CAS must be another logical step to evolve current security. This allows us to build new security rules on existing and well proved solution making the solution more accessible for people who are familiar with current solutions.
+Security policies in organizations are very consistent and are changing just slightly over time. Most of the organizations do not want or do not need to apply any radical changes. Therefore CAS must be another logical step to evolve current security. This allows us to build new security rules on existing and well proven solution making the solution more accessible for people who are familiar with current solutions.
 
 We propose creation of a security level, which is based on context in addition to traditional roles in RBAC. Level can be understood as quantification how is the user trustworthy and it is dynamically tied to user. The security level creates second security constraint beside traditional permission and therefore resources in application now can have two different kind of security rules - classic permission tied with role and security level.
 
@@ -264,7 +264,9 @@ verified & Change delivery address &  \\
 \hline\end{tabular}
 \end{table}
 
-To demonstrate difference and effectiveness in our novel approach we implement application describe above twice. Once using levels and once using traditional methods. Levels are implemented in Java EE and integrated into PicketLink\footnote{http://picketlink.org/} framework. Therefore both implementation of application are also build on top of Java EE specifications.
+To demonstrate difference and effectiveness in our novel approach we implement application describe above twice. Once using levels and once using traditional methods. Levels are implemented in Java EE and integrated into PicketLink\footnote{http://picketlink.org/} framework and currently are part of production version. Therefore both implementation of application are also build on top of Java EE specifications.
+
+In implementation without using levels needs to be code determining trusted user manually included in every method requiring, which requires user to be verified. As Listing 2 shows it brings few lines of unrelated code into those methods as well as new declaration of thrown exception. Code exhibits obvious concern tangling \cite{concernSeparation} represented by classes 'IpCheck' and 'SmsCheck'.
 
 \lstset{language=Java, caption={Method secured traditional way}, label=Traditional way}
 \begin{lstlisting}[]
@@ -277,7 +279,7 @@ public void makeOrder(Order o) throws NotTrustedUserException{
 }          
 \end{lstlisting}
 
-In implementation without using levels needs to be code determining trusted user manually included in every method requiring, which requires user to be verified. As Listing 2 shows it brings few lines of unrelated code into those methods as well as new declaration of thrown exception. Code exhibits obvious concern tangling \cite{concernSeparation} represented by classes 'IpCheck' and 'SmsCheck'.
+In Listing 3 you can clearly see that method using security levels is significantly shorter and does not have any unrelated code inside. Concern separation \cite{concernSeparation} increases cohesion \cite{cohesionCoupling} of method and in the same time reduces coupling \cite{cohesionCoupling}. The class 'IpCheck' has been changed to level resolver, which reduces dependencies, because all resolvers are invoked automatically during log in. The class SmsCheck was deleted completely, because the framework allows setting up level on authenticator as is shown in Listing 4. 
 
 \lstset{language=Java, caption={Method secured with levels}, label=Secured with levels}
 \begin{lstlisting}[]
@@ -288,7 +290,7 @@ public void makeOrder(Order o){
 }          
 \end{lstlisting}
 
-In Listing 3 you can clearly see that method using security levels is significantly shorter and does not have any unrelated code inside. Concern separation \cite{concernSeparation} increases cohesion \cite{cohesionCoupling} of method and in the same time reduces coupling \cite{cohesionCoupling}. The class 'IpCheck' has been changed to level resolver, which reduces dependencies, because all resolvers are invoked automatically during log in. The class SmsCheck was deleted completely, because the framework allows setting up level on authenticator as is shown in Listing 4. 
+You can clearly see that approach with levels adds to code of secured methods just one line with annotation. In addition it keeps code for determining level separated from business logic of the application and therefore allows faster development once the levels are programmed and easier maintenance and testing of the code. Without using levels there needs to be a condition for every possibility how to obtain given level. Therefore complexity of the code is unnecessary increased. Even if the security rules were extracted to another class it would add one more dependence for given class. The proposed solution can also decrease number of total classes in application because some levels are determined automatically by annotations (e.g. over authenticators).
 
 \lstset{language=Java, caption={Authenticator for SMS verification}, label=SMS authenticator}
 \begin{lstlisting}[]
@@ -297,8 +299,6 @@ public class SmsAuthenticator extends BaseAuthenticator {
 ...
 }
 \end{lstlisting}
-
-You can clearly see that approach with levels adds to code of secured methods just one line with annotation. In addition it keeps code for determining level separated from business logic of the application and therefore allows faster development once the levels are programmed and easier maintenance and testing of the code. Without using levels there needs to be a condition for every possibility how to obtain given level. Therefore complexity of the code is unnecessary increased. Even if the security rules were extracted to another class it would add one more dependence for given class. The proposed solution can also decrease number of total classes in application because some levels are determined automatically by annotations (e.g. over authenticators).
 
 In given example the implementation with levels removes 3 lines of code and exception declaration while adding one annotation in half of the secured methods. It also removes one class completely (while adding one annotation to authenticator) and second class is changed and there are no dependencies to it. It is obvious that with more complicated application the benefit will be even more significant.
 
