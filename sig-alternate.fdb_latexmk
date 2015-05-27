@@ -1,17 +1,17 @@
 # Fdb version 3
-["bibtex sig-alternate"] 1432737868 "sig-alternate.aux" "sig-alternate.bbl" "sig-alternate" 1432737969
+["bibtex sig-alternate"] 1432737868 "sig-alternate.aux" "sig-alternate.bbl" "sig-alternate" 1432738279
   "/usr/local/texlive/2014/texmf-dist/bibtex/bst/base/abbrv.bst" 1292289607 20329 b5fed53e10044d0f8112183785c759b1 ""
-  "sig-alternate.aux" 1432737969 2878 eaa61cbd4155eedf0949107c79857386 ""
+  "sig-alternate.aux" 1432738278 2878 eaa61cbd4155eedf0949107c79857386 ""
   "sig-alternate.bcf" 0 -1 0 ""
   "sigproc.bib" 1431877603 14430 b5011da3e5a0a18ad57cdd82fd298611 ""
   (generated)
-  "sig-alternate.bbl"
   "sig-alternate.blg"
-["dvips"] 1432737969 "sig-alternate.dvi" "sig-alternate.ps" "sig-alternate" 1432737969
-  "sig-alternate.dvi" 1432737969 48048 99fd662eb4987a5512c4449163ab5921 "latex"
+  "sig-alternate.bbl"
+["dvips"] 1432738279 "sig-alternate.dvi" "sig-alternate.ps" "sig-alternate" 1432738279
+  "sig-alternate.dvi" 1432738278 48048 8691ee12438860cc7ed5e61db4705d37 "latex"
   (generated)
   "sig-alternate.ps"
-["latex"] 1432737969 "sig-alternate.tex" "sig-alternate.dvi" "sig-alternate" 1432737969
+["latex"] 1432738278 "sig-alternate.tex" "sig-alternate.dvi" "sig-alternate" 1432738279
   "/usr/local/texlive/2014/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/helvetic/phvb8t.tfm" 1136768653 6628 34c39492c0adc454c1c199922bba8363 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/helvetic/phvbo8t.tfm" 1136768653 6880 fe6c7967f27585f6fa9876f3af14edd2 ""
@@ -78,15 +78,15 @@
   "/usr/local/texlive/2014/texmf-dist/web2c/texmf.cnf" 1418473959 31908 9e60cc122a23ef93121ea6e29902081d ""
   "/usr/local/texlive/2014/texmf-var/web2c/pdftex/latex.fmt" 1426523148 3847221 c2b6a317fb55a3f378413e953a82769f ""
   "/usr/local/texlive/2014/texmf.cnf" 1426523130 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "sig-alternate.aux" 1432737969 2878 eaa61cbd4155eedf0949107c79857386 ""
+  "sig-alternate.aux" 1432738278 2878 eaa61cbd4155eedf0949107c79857386 ""
   "sig-alternate.bbl" 1432737868 6535 f206a6f9d4815f5b4bc1be49d45e814c "bibtex sig-alternate"
   "sig-alternate.cls" 1362661588 59744 8230a5fbf2c386a55d2f105c064c7f85 ""
-  "sig-alternate.tex" 1432737966 31293 108ce40171c2bbda316b59f4028daade ""
+  "sig-alternate.tex" 1432738277 31293 4229febd07f6ceec00c702cae7116f45 ""
   (generated)
   "sig-alternate.aux"
-  "sig-alternate.dvi"
   "sig-alternate.log"
-["ps2pdf"] 1432737969 "sig-alternate.ps" "sig-alternate.pdf" "sig-alternate" 1432737969
-  "sig-alternate.ps" 1432737969 354125 8e66c4e8a05e69ce28bd3924a146d54e "dvips"
+  "sig-alternate.dvi"
+["ps2pdf"] 1432738279 "sig-alternate.ps" "sig-alternate.pdf" "sig-alternate" 1432738279
+  "sig-alternate.ps" 1432738279 354121 05eecf90c528d8674f3f80376581ce33 "dvips"
   (generated)
   "sig-alternate.pdf"

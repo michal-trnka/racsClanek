@@ -252,8 +252,6 @@ To demonstrate proposed solution we conduct a small case study. We implement a f
 In every application is important to know what are the operations that user might do and then determine security rules for them. In the showcase application is multiple actions, which is user allowed to perform on different authentication levels. This is shown in Table 1. It also shows how the level can be obtained. You can see that security rights are simple for our application, however for real application they most likely will be very complicated.
 
 \begin{table}
-\centering
-\caption{User's status and allowed actions}
 \begin{tabular}{|m{2cm}|m{2.5cm}|m{3cm}|} \hline
 User's status&Actions&Obtained\\ \hline
 none & Browse e-shop & default\\ \hline
@@ -262,6 +260,7 @@ logged in & View order \newline history & username/pwd\\ \hline
 verified & Change delivery address &  \\[5pt] 
  & Set trusted IP & \\[5pt]
 \hline\end{tabular}
+\caption{User's status and allowed actions}
 \end{table}
 
 To demonstrate difference and effectiveness in our novel approach we implement application describe above twice. Once using levels and once using traditional methods. Levels are implemented in Java EE and integrated into PicketLink\footnote{http://picketlink.org/} framework and currently are part of production version. Therefore both implementation of application are also build on top of Java EE specifications.
