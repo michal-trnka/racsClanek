@@ -73,6 +73,8 @@ INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/xcolor.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/xcolor.sty
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/multirow/multirow.sty
 INPUT sig-alternate.aux
 INPUT sig-alternate.aux
 OUTPUT sig-alternate.aux

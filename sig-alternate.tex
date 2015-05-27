@@ -51,6 +51,7 @@
 \usepackage{listings}
 \usepackage{array}
 \usepackage{xcolor}
+\usepackage{multirow}
 \newcommand\todo[1]{\textcolor{red}{#1}}
 
 \begin{document}
@@ -252,14 +253,14 @@ In every application is important to know what are the operations that user migh
 
 \begin{table}
 \centering
-\caption{\todo{Predelat tabulku}User's status and allowed actions}
+\caption{User's status and allowed actions}
 \begin{tabular}{|m{2cm}|m{2.5cm}|m{3cm}|} \hline
 User's status&Actions&Obtained\\ \hline
-none & browse e-shop & default\\ \hline
-logged in & view order \newline history & username/pwd\\ \hline
- &  Pay for purchase & SMS code verification \\ 
-verified & Change delivery address &  \\ 
- & Set trusted IP & Access from set IP address\\ 
+none & Browse e-shop & default\\ \hline
+logged in & View order \newline history & username/pwd\\ \hline
+ & Pay for purchase & \multirow{3}{*}{\parbox[t][][c]{3cm}{SMS code verification \newline Access from set IP address}} \\[5pt]
+verified & Change delivery address &  \\[5pt] 
+ & Set trusted IP & \\[5pt]
 \hline\end{tabular}
 \end{table}
 
