@@ -269,9 +269,8 @@ However, the solution poses a few limitations which require additional study. Am
 \section{Case study}
 A small case study is suggested to demonstrate the proposed solution.  A functional prototype of an e-shop with multiple actions and different security rules would be implemented. Users without any form of authentication will be able to browse the items in this shop and add them to a cart. Users who have logged in using their logins and passwords can view their order histories and delivery addresses. Finally, there will be a third level of authentication which would call the user possessing it the 'verified user'. This status allows users to change their delivery address and to pay for the purchases. This level is obtained by additional authentication done by one of two ways. The first possibility is to use a specially generated code delivered to the phone by phone text message. A second possibility would be to allow the user to set a trusted IP address (it can be set only if the user is already verified). When the user logs in from that IP address, he/she is automatically considered verified.
 
-In every application, it is important to be aware of the operations that user might utilize and then determine appropriate security rules. In the showcase application are multiple actions, which are users allowed to perform on different authentication levels. This is shown in Table 1. It also shows how the level can be obtained. It can be seen that security rights are simple for this application; however, for real applications, they most likely will be very complicated.
-
 \begin{table}
+\vspace{3px}
 \begin{tabular}{|m{2cm}|m{2.5cm}|m{3cm}|} \hline
 User's status&Actions&Obtained\\ \hline
 none & Browse e-shop & default\\ \hline
@@ -285,9 +284,10 @@ verified & Change delivery address &  \\[5pt]
 \vspace{-1em}
 \end{table}
 
+In every application, it is important to be aware of the operations that user might utilize and then determine appropriate security rules. In the showcase application are multiple actions, which are users allowed to perform on different authentication levels. This is shown in Table 1. It also shows how the level can be obtained. It can be seen that security rights are simple for this application; however, for real applications, they most likely will be very complicated.
+
 To demonstrate the differences in and effectiveness of this novel approach, the applications described will be implemented twice - once using levels and another using traditional methods. The output of the research is implemented in Java EE 7 and integrated into identity management framework PicketLink\footnote{http://picketlink.org/} framework and currently are part of production version. Therefore, both application implementations are also build on top of Java EE 7 specifications.
 
-In implementation without using levels needs to be code determining trusted user manually included in every method requiring, which requires user to be verified. As Listing 2 shows it brings few lines of unrelated code into those methods as well as new declaration of thrown exception. Code exhibits obvious concern tangling \cite{concernSeparation} represented by classes 'IpCheck' and 'SmsCheck'.
 
 \lstset{language=Java, caption={Method secured traditional way}, label=Traditional way}
 \begin{lstlisting}[]
@@ -300,7 +300,7 @@ public void makeOrder(Order o) throws NotTrustedUserException{
 }          
 \end{lstlisting}
 
-In Listing 3, it can be seen that the method using security levels is significantly shorter and does not have any unrelated code inside. Concern separation \cite{concernSeparation} increases cohesion \cite{cohesionCoupling} of method and at the same time reduces coupling \cite{cohesionCoupling}. The class 'IpCheck' has been changed to level resolver which reduces dependencies because all resolvers are invoked automatically during log in. The class SmsCheck was deleted completely because the framework allows setting up the level on authenticator as is shown in Listing 4.
+In implementation without using levels needs to be code determining trusted user manually included in every method requiring, which requires user to be verified. As Listing 2 shows it brings few lines of unrelated code into those methods as well as new declaration of thrown exception. Code exhibits obvious concern tangling \cite{concernSeparation} represented by classes 'IpCheck' and 'SmsCheck'.
 
 \lstset{language=Java, caption={Method secured with levels}, label=Secured with levels}
 \begin{lstlisting}[]
@@ -311,7 +311,7 @@ public void makeOrder(Order o){
 }          
 \end{lstlisting}
 
-It can be clearly seen that the approach with levels adds to code of secured methods just one line with annotation. In addition, it keeps the code for determining level separated from business logic of the application. This permits faster development once the levels are programmed as well as easier maintenance and testing of the code. Without using levels, there needs to be a condition for every possibility how to obtain given level. Therefore, complexity of the code is unnecessarily increased. Even if the security rules were extracted to another class, it would add one more dependence for given class. The proposed solution can also decrease the number of total classes in application because some levels are determined automatically by annotations (e.g. over authenticators).
+In Listing 3, it can be seen that the method using security levels is significantly shorter and does not have any unrelated code inside. Concern separation \cite{concernSeparation} increases cohesion \cite{cohesionCoupling} of method and at the same time reduces coupling \cite{cohesionCoupling}. The class 'IpCheck' has been changed to level resolver which reduces dependencies because all resolvers are invoked automatically during log in. The class SmsCheck was deleted completely because the framework allows setting up the level on authenticator as is shown in Listing 4.
 
 \lstset{language=Java, caption={Authenticator for SMS verification}, label=SMS authenticator}
 \begin{lstlisting}[]
@@ -320,6 +320,8 @@ public class SmsAuthenticator extends BaseAuthenticator {
 ...
 }
 \end{lstlisting}
+
+It can be clearly seen that the approach with levels adds to code of secured methods just one line with annotation. In addition, it keeps the code for determining level separated from business logic of the application. This permits faster development once the levels are programmed as well as easier maintenance and testing of the code. Without using levels, there needs to be a condition for every possibility how to obtain given level. Therefore, complexity of the code is unnecessarily increased. Even if the security rules were extracted to another class, it would add one more dependence for given class. The proposed solution can also decrease the number of total classes in application because some levels are determined automatically by annotations (e.g. over authenticators).
 
 In the given example, the implementation with levels removes three lines of code and exception declaration while adding one annotation in half of the secured methods. It also removes one class completely (while adding one annotation to authenticator). Second class is changed and there are no dependencies to it. It is obvious that with more complicated applications, the benefits will be even more significant.
 
