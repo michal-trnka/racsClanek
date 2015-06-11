@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=latex 2015.3.16)  4 JUN 2015 11:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=latex 2015.3.16)  11 JUN 2015 11:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -237,48 +237,43 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 (./sig-alternate.aux)
 \openout1 = `sig-alternate.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
 \c@lstlisting=\count116
-LaTeX Font Info:    Try loading font information for U+msa on input line 131.
+LaTeX Font Info:    Try loading font information for U+msa on input line 133.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 131.
+LaTeX Font Info:    Try loading font information for U+msb on input line 133.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 131.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 133.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-Overfull \hbox (4.86795pt too wide) in paragraph at lines 144--145
-[]\T1/aer/m/n/9 Contemporary ap-pli-ca-tions move to-ward context-awareness
- []
-
-[1
+) [1
 
 
 ]
-Overfull \hbox (1.169pt too wide) in paragraph at lines 168--169
+Overfull \hbox (1.169pt too wide) in paragraph at lines 170--171
 []\T1/aer/m/n/9 Multiple at-tempts have been made to ex-tend clas-sic RBAC
  []
 
 
-Overfull \hbox (5.6316pt too wide) in paragraph at lines 174--175
+Overfull \hbox (5.6316pt too wide) in paragraph at lines 176--177
 \T1/aer/m/n/9 sug-gests adding con-text con-straints to se-cu-rity poli-cies. W
 hen
  []
@@ -287,7 +282,7 @@ hen
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Overfull \hbox (1.23967pt too wide) in paragraph at lines 182--183
+Overfull \hbox (1.23967pt too wide) in paragraph at lines 184--185
 \T1/aer/m/n/9 He de-scribes mul-ti-ple con-di-tions in-clud-ing con-text con-st
 rains
  []
@@ -295,7 +290,7 @@ rains
 (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
-LaTeX Font Info:    Try loading font information for T1+aett on input line 207.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 209.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aett.fd
@@ -303,24 +298,24 @@ File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 
 LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
-(Font)              using `T1/aett/m/n' instead on input line 210.
+(Font)              using `T1/aett/m/n' instead on input line 212.
 
 [3]
-Underfull \hbox (badness 3861) in paragraph at lines 259--259
+Underfull \hbox (badness 3861) in paragraph at lines 261--261
 []\T1/aer/m/n/9 SMS code ver-i-fi-ca-
  []
 
 
-Overfull \vbox (13.59596pt too high) detected at line 259
+Overfull \vbox (13.59596pt too high) detected at line 261
  []
 
 
-Underfull \hbox (badness 6412) in paragraph at lines 260--260
+Underfull \hbox (badness 6412) in paragraph at lines 262--262
 []|\T1/aer/m/n/9 Change de-liv-ery
  []
 
 
-Overfull \hbox (7.79561pt too wide) in paragraph at lines 255--263
+Overfull \hbox (7.79561pt too wide) in paragraph at lines 257--265
 [][] 
  []
 
@@ -338,10 +333,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  3696 strings out of 493110
  46375 string characters out of 6135036
- 172871 words of memory out of 5000000
+ 173842 words of memory out of 5000000
  7120 multiletter control sequences out of 15000+600000
  43459 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,14n,40p,1071b,1021s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,14n,40p,1074b,1021s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sig-alternate.dvi (6 pages, 48536 bytes).
+Output written on sig-alternate.dvi (6 pages, 49160 bytes).

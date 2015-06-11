@@ -110,8 +110,8 @@ INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aett.fd
 INPUT /usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aett.fd
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/ae/aett8.tfm
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/ae/aett9.tfm
+INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/ae/aeti9.tfm
 INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/ae/aer6.tfm
 INPUT sig-alternate.bbl
 INPUT sig-alternate.bbl
-INPUT /usr/local/texlive/2014/texmf-dist/fonts/tfm/public/ae/aeti9.tfm
 INPUT sig-alternate.aux
