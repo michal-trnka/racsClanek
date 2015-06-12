@@ -1,17 +1,17 @@
 # Fdb version 3
-["bibtex sig-alternateBlind"] 1434098242 "sig-alternateBlind.aux" "sig-alternateBlind.bbl" "sig-alternateBlind" 1434098242
+["bibtex sig-alternateBlind"] 1434098242 "sig-alternateBlind.aux" "sig-alternateBlind.bbl" "sig-alternateBlind" 1434098540
   "/usr/local/texlive/2014/texmf-dist/bibtex/bst/base/abbrv.bst" 1292289607 20329 b5fed53e10044d0f8112183785c759b1 ""
-  "sig-alternateBlind.aux" 1434098242 2883 67a0d58d77c2638a1ff4a189ae811eb7 ""
+  "sig-alternateBlind.aux" 1434098540 2883 67a0d58d77c2638a1ff4a189ae811eb7 ""
   "sig-alternateBlind.bcf" 0 -1 0 ""
   "sigprocblind.bib" 1434023274 13757 8c09e38598fa90a1b30b0b8c96618af3 ""
   (generated)
-  "sig-alternateBlind.bbl"
   "sig-alternateBlind.blg"
-["dvips"] 1434098242 "sig-alternateBlind.dvi" "sig-alternateBlind.ps" "sig-alternateBlind" 1434098242
-  "sig-alternateBlind.dvi" 1434098242 47892 2e93c6c35f91fdd0db5b072011270346 "latex"
+  "sig-alternateBlind.bbl"
+["dvips"] 1434098540 "sig-alternateBlind.dvi" "sig-alternateBlind.ps" "sig-alternateBlind" 1434098540
+  "sig-alternateBlind.dvi" 1434098540 47896 e6ced0300c7ff5fc90dcd2a07e38b115 "latex"
   (generated)
   "sig-alternateBlind.ps"
-["latex"] 1434098242 "sig-alternateBlind.tex" "sig-alternateBlind.dvi" "sig-alternateBlind" 1434098242
+["latex"] 1434098540 "sig-alternateBlind.tex" "sig-alternateBlind.dvi" "sig-alternateBlind" 1434098540
   "/usr/local/texlive/2014/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/helvetic/phvb8t.tfm" 1136768653 6628 34c39492c0adc454c1c199922bba8363 ""
   "/usr/local/texlive/2014/texmf-dist/fonts/tfm/adobe/helvetic/phvbo8t.tfm" 1136768653 6880 fe6c7967f27585f6fa9876f3af14edd2 ""
@@ -79,14 +79,14 @@
   "/usr/local/texlive/2014/texmf-var/web2c/pdftex/latex.fmt" 1426523148 3847221 c2b6a317fb55a3f378413e953a82769f ""
   "/usr/local/texlive/2014/texmf.cnf" 1426523130 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
   "sig-alternate.cls" 1362661588 59744 8230a5fbf2c386a55d2f105c064c7f85 ""
-  "sig-alternateBlind.aux" 1434098242 2883 67a0d58d77c2638a1ff4a189ae811eb7 ""
+  "sig-alternateBlind.aux" 1434098540 2883 67a0d58d77c2638a1ff4a189ae811eb7 ""
   "sig-alternateBlind.bbl" 1434098242 6221 d00fa664484ec5f529557b7894801123 "bibtex sig-alternateBlind"
-  "sig-alternateBlind.tex" 1434098240 32496 5bed97e7fd3125cbf8d760a560e9d197 ""
+  "sig-alternateBlind.tex" 1434098539 32498 6c58bc653951d0e4c134f12d01b17efc ""
   (generated)
-  "sig-alternateBlind.dvi"
   "sig-alternateBlind.log"
+  "sig-alternateBlind.dvi"
   "sig-alternateBlind.aux"
-["ps2pdf"] 1434098242 "sig-alternateBlind.ps" "sig-alternateBlind.pdf" "sig-alternateBlind" 1434098242
-  "sig-alternateBlind.ps" 1434098242 354934 f83c92eb6aff599946ad02ab547314f2 "dvips"
+["ps2pdf"] 1434098540 "sig-alternateBlind.ps" "sig-alternateBlind.pdf" "sig-alternateBlind" 1434098540
+  "sig-alternateBlind.ps" 1434098540 354933 c661935dc2615dff410836ed7705d64a "dvips"
   (generated)
   "sig-alternateBlind.pdf"
