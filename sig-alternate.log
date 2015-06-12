@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=latex 2015.3.16)  11 JUN 2015 13:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=latex 2015.3.16)  12 JUN 2015 10:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -250,17 +250,17 @@ LaTeX Font Info:    ... okay on input line 59.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
 LaTeX Font Info:    ... okay on input line 59.
 \c@lstlisting=\count116
-LaTeX Font Info:    Try loading font information for U+msa on input line 133.
+LaTeX Font Info:    Try loading font information for U+msa on input line 132.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 133.
+LaTeX Font Info:    Try loading font information for U+msb on input line 132.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 133.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 132.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -268,12 +268,12 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 
 
 ]
-Overfull \hbox (1.169pt too wide) in paragraph at lines 170--171
+Overfull \hbox (1.169pt too wide) in paragraph at lines 169--170
 []\T1/aer/m/n/9 Multiple at-tempts have been made to ex-tend clas-sic RBAC
  []
 
 
-Overfull \hbox (5.6316pt too wide) in paragraph at lines 176--177
+Overfull \hbox (5.6316pt too wide) in paragraph at lines 175--176
 \T1/aer/m/n/9 sug-gests adding con-text con-straints to se-cu-rity poli-cies. W
 hen
  []
@@ -282,7 +282,7 @@ hen
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Overfull \hbox (1.23967pt too wide) in paragraph at lines 184--185
+Overfull \hbox (1.23967pt too wide) in paragraph at lines 183--184
 \T1/aer/m/n/9 He de-scribes mul-ti-ple con-di-tions in-clud-ing con-text con-st
 rains
  []
@@ -290,7 +290,7 @@ rains
 (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
-LaTeX Font Info:    Try loading font information for T1+aett on input line 209.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 208.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/ae/t1aett.fd
@@ -298,24 +298,24 @@ File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 
 LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
-(Font)              using `T1/aett/m/n' instead on input line 212.
+(Font)              using `T1/aett/m/n' instead on input line 211.
 
 [3]
-Underfull \hbox (badness 3861) in paragraph at lines 261--261
+Underfull \hbox (badness 3861) in paragraph at lines 260--260
 []\T1/aer/m/n/9 SMS code ver-i-fi-ca-
  []
 
 
-Overfull \vbox (13.59596pt too high) detected at line 261
+Overfull \vbox (13.59596pt too high) detected at line 260
  []
 
 
-Underfull \hbox (badness 6412) in paragraph at lines 262--262
+Underfull \hbox (badness 6412) in paragraph at lines 261--261
 []|\T1/aer/m/n/9 Change de-liv-ery
  []
 
 
-Overfull \hbox (7.79561pt too wide) in paragraph at lines 257--266
+Overfull \hbox (7.79561pt too wide) in paragraph at lines 256--265
 [][]
  []
 
@@ -339,4 +339,4 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  39i,14n,40p,1074b,1021s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sig-alternate.dvi (6 pages, 48944 bytes).
+Output written on sig-alternate.dvi (6 pages, 48912 bytes).
