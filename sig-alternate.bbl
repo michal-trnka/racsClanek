@@ -8,9 +8,9 @@ G.~D. Abowd, A.~K. Dey, P.~J. Brown, N.~Davies, M.~Smith, and P.~Steggles.
   Springer-Verlag.
 
 \bibitem{memex}
-V.~Bush and A.~W.~M. Think.
-\newblock The atlantic monthly.
-\newblock {\em As we may think}, 176(1):101--108, 1945.
+V.~Bush.
+\newblock As we may think.
+\newblock {\em The atlantic monthly}, 176(1):101--108, 1945.
 
 \bibitem{ubiscom}
 A.~Corrad, R.~Montanari, and D.~Tibaldi.
@@ -73,9 +73,8 @@ M.~Macik, T.~Cerny, and P.~Slavik.
 \bibitem{genericcontext}
 G.~K. Most{\'e}faoui and P.~Br{\'e}zillon.
 \newblock A generic framework for context-based distributed authorizations.
-\newblock In P.~Blackburn, C.~Ghidini, R.~Turner, and F.~Giunchiglia, editors,
-  {\em Modeling and Using Context}, volume 2680 of {\em Lecture Notes in
-  Computer Science}, pages 204--217. Springer Berlin Heidelberg, 2003.
+\newblock In {\em Modeling and Using Context}, volume 2680 of {\em Lecture
+  Notes in Computer Science}, pages 204--217. Springer Berlin Heidelberg, 2003.
 
 \bibitem{contextAwareMobile}
 Y.~Mowafi, D.~Abou-Tair, T.~Aqarbeh, M.~Abilov, V.~Dmitriyev, and J.~M. Gomez.
@@ -101,9 +100,9 @@ G.~Neumann and M.~Strembeck.
 \bibitem{contextroles}
 S.-H. Park, Y.-J. Han, and T.-M. Chung.
 \newblock Context-role based access control for context-aware application.
-\newblock In M.~Gerndt and D.~Kranzlm{\"u}ller, editors, {\em High Performance
-  Computing and Communications}, volume 4208 of {\em Lecture Notes in Computer
-  Science}, pages 572--580. Springer Berlin Heidelberg, 2006.
+\newblock In {\em High Performance Computing and Communications}, volume 4208
+  of {\em Lecture Notes in Computer Science}, pages 572--580. Springer Berlin
+  Heidelberg, 2006.
 
 \bibitem{eacl}
 T.~Ryutov and C.~Neuman.
@@ -114,9 +113,9 @@ T.~Ryutov and C.~Neuman.
 \bibitem{accesscontrol}
 R.~Sandhu.
 \newblock Access control: The neglected frontier.
-\newblock In J.~Pieprzyk and J.~Seberry, editors, {\em Information Security and
-  Privacy}, volume 1172 of {\em Lecture Notes in Computer Science}, pages
-  219--227. Springer Berlin Heidelberg, 1996.
+\newblock In {\em Information Security and Privacy}, volume 1172 of {\em
+  Lecture Notes in Computer Science}, pages 219--227. Springer Berlin
+  Heidelberg, 1996.
 
 \bibitem{contextaware}
 B.~Schilit, N.~Adams, and R.~Want.

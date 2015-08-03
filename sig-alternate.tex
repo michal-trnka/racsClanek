@@ -144,14 +144,14 @@ Security of software applications is very a challenging and extensive topic. To 
 \section{Introduction}
 Contemporary applications move toward Context-Aware-ness (CA) \cite{context,tomas1}. It is caused by emerge of the amount of the mobile technologies \cite{mobilecontext}, as well as by the users demand for personalized applications. Applications provide personalized content based on the user's or the application's context \cite{personalizedcontext}. This results in a completely new experience for the application's operators and users. However, the security design fails to consider CA. Usually, users are assigned various roles in applications or permissions for resources and security rules are independent of the context. There is only a few applications, which has security based on context (e.g. Google provides content based on history and Facebook required additional authentication if logged from unusual place). We can expect that users and application owners would take advantage of application security that is based on context to provide specific resource access based on context.
 
-Applications using Context-Aware Security (CAS) can be much less obtrusive for users. They can be asked for different authentication methods based on context. They can also be authorized for the same resource in various ways depending on their context. For example, access from New York can differ from access rights required from London. They can even sometimes omit authentication because their context is trustworthy by itself (e.g. access from inner company network). Similar to users, also application operators can profit from the context-based authentication. They might define stricter security rules for suspicious users' behavior (e.g. Internet access to system confidential resources at night). Using context allows system administrators to define finer-grained security rules that would be otherwise tangle through multiple rules and make them unsustainable for maintenance. 
+Applications using Context-Aware Security (CAS) can be much less obtrusive for users. They can be asked for different authentication methods based on context. They can also be authorized for the same resource in various ways depending on their context. For example, access from New York can differ from access rights required from London. They can even sometimes omit authentication because their context is trustworthy by itself (e.g. access from inner company network). Like users, application operators can also profit from the context-based authentication. They might define stricter security rules for suspicious users' behavior (e.g. Internet access to system confidential resources at night). Using context allows system administrators to define finer-grained security rules that would be otherwise tangle through multiple rules and make them unsustainable for maintenance. 
 
 Application operators and software developers are well aware of the added value of CAS; however, none of the existing proposals on its use are widely used. \cite{ubiscom,envroles,hung,contextawarerbac,genericcontext,contextAwareMobile,grbac,xorbac,contextroles,eacl,contextaccess,wendong}. They are either too complex to use or they are too innovative, requiring complete system redesign that many find too difficult to incorporate into existing solutions.
 
 This paper presents  one possible solution that will extend the standard RBAC security architecture with CA elements. This extension bases on users security levels that consider their context. Accessing application resources requires that the user posses particular level in addition to his/her usual access rights. It will allow an extension to various current security architectures with CA elements.
 
 \section{Background}
-Large applications and information systems need some form of authentication and authorization. Existing systems have been available for many decades and are almost as old as computers. As and example, the Memex information system was proposed as early as 1945 \cite{memex}. Concerns regarding application security have existed for many decades and have been addressed in various ways.
+Large applications and information systems need some form of authentication and authorization. Existing systems have been available for many decades and are almost as old as computers. As an example, the Memex information system was proposed as early as 1945 \cite{memex}. Concerns regarding application security have existed for many decades and have been addressed in various ways.
 
 Two of the oldest principles for securing application resources are Mandatory Access Control (MAC) \cite{accesscontrol} and Discretionary Access Control (DAC) \cite{accesscontrol}. These two principles do not explain how application security should be implemented, but rather define core principles in its authorization. In MAC, there exists an authority that has the responsibility to grant permissions to access all resources. On the contrary, in DAC, the permission can be granted by anyone with sufficient permission for the resource.
 
@@ -178,9 +178,9 @@ Lima et. al. \cite{contextlayer} adds another context dimension to current secur
 
 One interesting idea has been proposed by Hung et. al. \cite{hung} He proposes three entities in security rules - object, user and activity. All entities must have some credentials. If a user wants to perform an action on an object, he/she needs to pose credentials required for both the object and the activity. Although this approach is not connected with RBAC, it can provide some interesting ideas that might be used in RBAC.
 
-Another solution is proposed by Wendong et. al. \cite{wendong} He suggests adding user security level in addition to RBAC and define needed security levels to perform actions. Idea is with adding security levels is very interesting in connection to this paper, however grants the security level manually to user and not based on context. Therefore, there should be some higher authority which decides what level a user should poses.
+Another solution is proposed by Wendong et. al. \cite{wendong} He suggests adding user security level in addition to RBAC and define needed security levels to perform actions. Idea is with adding security levels is very interesting in connection to this paper, however grants the security level manually to user and not based on context. Therefore, there should be some higher authority which decides what level a user should possess.
 
-Neuman et. al. \cite{eacl} presents some very interesting and complex approaches to extend Access Control Lists (ACL). He describes multiple conditions including context constrains and the way they should be enforced on objects. An object is protected with access rights, which can be both positive or negative and with optional set of associated conditions. Even thought he describes the solution for ACL, many of his proposals can be used in any security concept including RBAC.
+Neuman et. al. \cite{eacl} presents some very interesting and complex approaches to extend Access Control Lists (ACL). He describes multiple conditions including context constrains and the way they should be enforced on objects. An object is protected with access rights, which can be both positive or negative and with optional set of associated conditions. Even though he describes the solution for ACL, many of his proposals can be used in any security concept including RBAC.
 
 \section{Proposed Solution}
 Security policies in organizations are very consistent and change little over time. Most organizations do not want or do not need to apply any radical changes. Therefore, the use of CAS must be another logical step to evolve current security. This will allow the creation of new security rules on existing and well proven solution making the solution more accessible for people who are familiar with current solutions.
@@ -218,7 +218,7 @@ As the context of the user and the application changes, the level needs to refle
 
 The level resolution is achieved by context resolvers. Each resolver takes the responsibility for checking one particular part of context. For example, one resolver would determine the network from which the user comes. Another would check the time of the day and so on. Every resolver would return which level it grants to the user. As the security resolver is written within the application, it has access to users information (e.g. his request, information about him stored in database, etc.). It can also use information about the application (such as number of requests, number of users). Furthermore, it can even consider the machine the application is running on (e.g. load of the machine, resource usage, location of the server, etc.). The level does not need to be set in the resolver nor does it need to decide whether to grant it or not. The resolver itself makes the decision which level to grant. After every resolver performs its inner logic and determines the level on its own, the highest level is used as the final user's security level.
 
-The level representation by itself is very abstract. It is only necessary for the level to be comparable with other levels to know whether the given level is higher or lower then the required one and also to determine the highest one. Therefore, it is not important whether the number, string or even some more complex structure represents the level. This leaves a lot of space for customization for a given application.
+The level representation by itself is very abstract. Its only constrain is to be comparable with other levels. Therefore, it is not important whether the number, string or even some more complex structure represents the level. This leaves a lot of space for customization for a given application.
 
 The proposed solution has many advantages. Some of the most important ones are:
 
@@ -227,16 +227,16 @@ The proposed solution has many advantages. Some of the most important ones are:
 	 \setlength{\parskip}{0pt}
   \setlength{\parsep}{0pt}
   \item {\em Lightweight} - it does not require any complex structures in application nor it does not consume significant system resources. 
-  \item {\em Easy to use} - it just requires adding another type of constrain to resources that need to poses CAS.
+  \item {\em Easy to use} - it just requires adding another type of constrain to resources that need to possess CAS.
   
-  \item {\em Voluntary} - if someone wants to use plain RBAC he can and just to chosen resources he might add level restrictions. 
+  \item {\em Voluntary} - developer may use is not forced to use additional level restrictions on every resource.
   
-  \item {\em Scalable} - there is not any predefined set of levels nor there is no limit in amount of levels in application.
+  \item {\em Scalable} - there is no predefined set of levels nor is there any limitation on the number of levels in application.
   
   \item {\em Universal} - the solution can be modified and used with other security architectures, not just with RBAC.
 \end{itemize}
 
-However, the solution poses a few limitations which require additional study. Among them the most significant are:
+However, the solution possess a few limitations which require additional study. Among them the most significant are:
 \begin{itemize}
 		\setlength{\itemsep}{1pt}
 	 \setlength{\parskip}{0pt}
@@ -250,7 +250,7 @@ However, the solution poses a few limitations which require additional study. Am
 \section{Case study}
 A small case study is suggested to demonstrate the proposed solution.  A functional prototype of an e-shop with multiple actions and different security rules would be implemented. Users without any form of authentication will be able to browse the items in this shop and add them to a cart. Users who have logged in using their logins and passwords can view their order histories and delivery addresses. Finally, there will be a third level of authentication which would call the user possessing it the 'verified user'. This status allows users to change their delivery address and to pay for the purchases. This level is obtained by additional authentication done by one of two ways. The first possibility is to use a specially generated code delivered to the phone by phone text message. A second possibility would be to allow the user to set a trusted IP address (it can be set only if the user is already verified). When the user logs in from that IP address, he/she is automatically considered verified.
 
-In every application, it is important to be aware of the operations that user might utilize and then determine appropriate security rules. In the showcase application are multiple actions, which are users allowed to perform on different authentication levels. This is shown in Table 1. It also shows how the level can be obtained. It can be seen that security rights are simple for this application; however, for real applications, they most likely will be very complicated.
+In every application, it is important to be aware of the operations that user might utilize and then determine appropriate security rules. In the showcase application are multiple actions with different levels restrictions. This is shown in Table 1. It also shows how the level can be obtained. It can be seen that security rights are simple for this application; however, for real applications, they most likely will be very complicated.
 
 \begin{table}
 \begin{tabular}{|m{2cm}|m{2.5cm}|m{3cm}|} \hline
@@ -268,8 +268,6 @@ verified & Change delivery address &  \\[5pt]
 
 To demonstrate the differences in and effectiveness of this novel approach, the applications described will be implemented twice - once using levels and another using traditional methods. The output of the research is implemented in Java EE 7 and integrated into identity management framework PicketLink\footnote{http://picketlink.org/} framework and currently are part of production version. Therefore, both application implementations are also build on top of Java EE 7 specifications.
 
-In implementation without using levels needs to be code determining trusted user manually included in every method requiring, which requires user to be verified. As Listing 2 shows it brings few lines of unrelated code into those methods as well as new declaration of thrown exception. Code exhibits obvious concern tangling \cite{concernSeparation} represented by classes 'IpCheck' and 'SmsCheck'.
-
 \lstset{language=Java, caption={Method secured traditional way}, label=Traditional way}
 \begin{lstlisting}[]
 @HasRole('customer')
@@ -281,7 +279,7 @@ public void makeOrder(Order o) throws NotTrustedUserException{
 }          
 \end{lstlisting}
 
-In Listing 3, it can be seen that the method using security levels is significantly shorter and does not have any unrelated code inside. Concern separation \cite{concernSeparation} increases cohesion \cite{cohesionCoupling} of method and at the same time reduces coupling \cite{cohesionCoupling}. The class 'IpCheck' has been changed to level resolver which reduces dependencies because all resolvers are invoked automatically during log in. The class SmsCheck was deleted completely because the framework allows setting up the level on authenticator as is shown in Listing 4.
+In implementation without levels, every secured method needs code for determining user's context. As Listing 2 shows it brings few lines of unrelated code into those methods as well as new declaration of thrown exception. Code exhibits obvious concern tangling \cite{concernSeparation} represented by classes 'IpCheck' and 'SmsCheck'.
 
 \lstset{language=Java, caption={Method secured with levels}, label=Secured with levels}
 \begin{lstlisting}[]
@@ -291,6 +289,8 @@ public void makeOrder(Order o){
     ...
 }          
 \end{lstlisting}
+
+In Listing 3, it can be seen that the method using security levels is significantly shorter and does not have any unrelated code inside. Concern separation \cite{concernSeparation} increases cohesion \cite{cohesionCoupling} of method and at the same time reduces coupling \cite{cohesionCoupling}. The class 'IpCheck' has been changed to level resolver which reduces dependencies because all resolvers are invoked automatically during log in. The class SmsCheck was deleted completely because the framework allows setting up the level on authenticator as is shown in Listing 4.
 
 It can be clearly seen that the approach with levels adds to code of secured methods just one line with annotation. In addition, it keeps the code for determining level separated from business logic of the application. This permits faster development once the levels are programmed as well as easier maintenance and testing of the code. Without using levels, there needs to be a condition for every possibility how to obtain given level. Therefore, complexity of the code is unnecessarily increased. Even if the security rules were extracted to another class, it would add one more dependence for given class. The proposed solution can also decrease the number of total classes in application because some levels are determined automatically by annotations (e.g. over authenticators).
 
@@ -307,11 +307,11 @@ In the given example, the implementation with levels removes three lines of code
 The result of the case study can be summarized as follows: better reuse, lower coupling, higher cohesion, less code (about 3 lines of code per rule usage and about 10 per rule declaration). Code save can be significant in large projects. For example project with 100 security rules, each used 300 times, saves almost 2000 lines of code.
 
 \section{Conclusion}
-The focus of this paper is on the area of the CAS and mainly on RBAC architecture with CAS elements. As is covered by related works, the main issue of CAS is no existing standard or efficient best practice solution. There are multiple approaches on ways to incorporate CA elements into RBAC. However, they all suffer from multiple inconveniences. They are either too complicated and therefore significantly decreases one of the main advantages of RBAC - its simplicity to maintain and develop. In some cases, they also demand a lot of computational resources or even change the RBAC so extensively that it can be hardly called RBAC anymore.
+The focus of this paper is on the area of the CAS and mainly on RBAC architecture with CAS elements. As related work covers, the main issue of CAS is no existing standard or efficient best practice solution. There are multiple approaches on ways to incorporate CA elements into RBAC. However, they all suffer from multiple inconveniences. They are often too complicated and therefore significantly decreases one of the main advantages of RBAC - its simplicity to maintain and develop. In some cases, they also demand a lot of computational resources or even change the RBAC so extensively that it can be hardly called RBAC anymore.
 
 A novel approach has been introduced that adds another security constraint in addition to classic permissions tied to roles. The constraint is called security level and it is based on the context. Basically, the level describes how much a user can be trusted. To access resource in application user is required not only to posses permission through roles but also to have corresponding security level. This approach retains the advantages of RBAC and extends them further with CA elements. Although the solution has a few limitations, it brings multiple advantages to support CAS. 
 
-Future studies are desired that will focus on the transfer of security levels to other security architectures. Preliminary studies have shown the potential and flexibility to utilize the advantages. In addition, options to overcome linearity of the levels should be examined as well as how to model more complex context security constraints and generally reduce downsides of the proposed solution.
+Future studies will focus on the transfer of security levels to other security architectures. Preliminary studies have shown the potential and flexibility to utilize the advantages. In addition, options to overcome linearity of the levels should be examined as well as how to model more complex context security constraints and generally reduce downsides of the proposed solution.
 
 %ACKNOWLEDGMENTS are optional
 \section{Acknowledgments}

@@ -5,42 +5,42 @@ The style file: abbrv.bst
 Database file #1: sigproc.bib
 You've used 23 entries,
             2118 wiz_defined-function locations,
-            663 strings with 8853 characters,
-and the built_in function-call counts, 11018 in all, are:
-= -- 1100
-> -- 513
+            660 strings with 8671 characters,
+and the built_in function-call counts, 10828 in all, are:
+= -- 1094
+> -- 477
 < -- 21
-+ -- 205
-- -- 174
-* -- 790
-:= -- 1667
++ -- 194
+- -- 164
+* -- 766
+:= -- 1625
 add.period$ -- 78
 call.type$ -- 23
-change.case$ -- 152
+change.case$ -- 151
 chr.to.int$ -- 0
 cite$ -- 23
 duplicate$ -- 457
-empty$ -- 847
-format.name$ -- 174
-if$ -- 2455
+empty$ -- 844
+format.name$ -- 164
+if$ -- 2423
 int.to.chr$ -- 0
 int.to.str$ -- 23
 missing$ -- 23
 newline$ -- 118
-num.names$ -- 52
-pop$ -- 167
+num.names$ -- 46
+pop$ -- 166
 preamble$ -- 1
-purify$ -- 129
+purify$ -- 128
 quote$ -- 0
-skip$ -- 370
+skip$ -- 367
 stack$ -- 0
-substring$ -- 753
+substring$ -- 752
 swap$ -- 184
 text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 92
 warning$ -- 0
-while$ -- 99
+while$ -- 96
 width$ -- 25
 write$ -- 282
