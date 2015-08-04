@@ -218,7 +218,7 @@ As the context of the user and the application changes, the level needs to refle
 
 The level resolution is achieved by context resolvers. Each resolver takes the responsibility for checking one particular part of context. For example, one resolver would determine the network from which the user comes. Another would check the time of the day and so on. Every resolver would return which level it grants to the user. As the security resolver is written within the application, it has access to users information (e.g. his request, information about him stored in database, etc.). It can also use information about the application (such as number of requests, number of users). Furthermore, it can even consider the machine the application is running on (e.g. load of the machine, resource usage, location of the server, etc.). The level does not need to be set in the resolver nor does it need to decide whether to grant it or not. The resolver itself makes the decision which level to grant. After every resolver performs its inner logic and determines the level on its own, the highest level is used as the final user's security level.
 
-The level representation by itself is very abstract. It is only necessary for the level to be comparable with other levels to know whether the given level is higher or lower then the required one and also to determine the highest one. Therefore, it is not important whether the number, string or even some more complex structure represents the level. This leaves a lot of space for customization for a given application.
+The level representation by itself is very abstract. Its only constrain is to be comparable with other levels. Therefore, it is not important whether the number, string or even some more complex structure represents the level. This leaves a lot of space for customization for a given application.
 
 The proposed solution has many advantages. Some of the most important ones are:
 
@@ -268,8 +268,6 @@ verified & Change delivery address &  \\[5pt]
 
 To demonstrate the differences in and effectiveness of this novel approach, the applications described will be implemented twice - once using levels and another using traditional methods. The output of the research is implemented in Java EE 7 and integrated into identity management framework PicketLink\footnote{http://picketlink.org/} framework and currently are part of production version. Therefore, both application implementations are also build on top of Java EE 7 specifications.
 
-In implementation without levels, every secured method needs code for determining user's context. As Listing 2 shows it brings few lines of unrelated code into those methods as well as new declaration of thrown exception. Code exhibits obvious concern tangling \cite{concernSeparation} represented by classes 'IpCheck' and 'SmsCheck'.
-
 \lstset{language=Java, caption={Method secured traditional way}, label=Traditional way}
 \begin{lstlisting}[]
 @HasRole('customer')
@@ -281,7 +279,7 @@ public void makeOrder(Order o) throws NotTrustedUserException{
 }          
 \end{lstlisting}
 
-In Listing 3, it can be seen that the method using security levels is significantly shorter and does not have any unrelated code inside. Concern separation \cite{concernSeparation} increases cohesion \cite{cohesionCoupling} of method and at the same time reduces coupling \cite{cohesionCoupling}. The class 'IpCheck' has been changed to level resolver which reduces dependencies because all resolvers are invoked automatically during log in. The class SmsCheck was deleted completely because the framework allows setting up the level on authenticator as is shown in Listing 4.
+In implementation without levels, every secured method needs code for determining user's context. As Listing 2 shows it brings few lines of unrelated code into those methods as well as new declaration of thrown exception. Code exhibits obvious concern tangling \cite{concernSeparation} represented by classes 'IpCheck' and 'SmsCheck'.
 
 \lstset{language=Java, caption={Method secured with levels}, label=Secured with levels}
 \begin{lstlisting}[]
@@ -291,6 +289,8 @@ public void makeOrder(Order o){
     ...
 }          
 \end{lstlisting}
+
+In Listing 3, it can be seen that the method using security levels is significantly shorter and does not have any unrelated code inside. Concern separation \cite{concernSeparation} increases cohesion \cite{cohesionCoupling} of method and at the same time reduces coupling \cite{cohesionCoupling}. The class 'IpCheck' has been changed to level resolver which reduces dependencies because all resolvers are invoked automatically during log in. The class SmsCheck was deleted completely because the framework allows setting up the level on authenticator as is shown in Listing 4.
 
 It can be clearly seen that the approach with levels adds to code of secured methods just one line with annotation. In addition, it keeps the code for determining level separated from business logic of the application. This permits faster development once the levels are programmed as well as easier maintenance and testing of the code. Without using levels, there needs to be a condition for every possibility how to obtain given level. Therefore, complexity of the code is unnecessarily increased. Even if the security rules were extracted to another class, it would add one more dependence for given class. The proposed solution can also decrease the number of total classes in application because some levels are determined automatically by annotations (e.g. over authenticators).
 
@@ -307,11 +307,11 @@ In the given example, the implementation with levels removes three lines of code
 The result of the case study can be summarized as follows: better reuse, lower coupling, higher cohesion, less code (about 3 lines of code per rule usage and about 10 per rule declaration). Code save can be significant in large projects. For example project with 100 security rules, each used 300 times, saves almost 2000 lines of code.
 
 \section{Conclusion}
-The focus of this paper is on the area of the CAS and mainly on RBAC architecture with CAS elements. As is covered by related works, the main issue of CAS is no existing standard or efficient best practice solution. There are multiple approaches on ways to incorporate CA elements into RBAC. However, they all suffer from multiple inconveniences. They are either too complicated and therefore significantly decreases one of the main advantages of RBAC - its simplicity to maintain and develop. In some cases, they also demand a lot of computational resources or even change the RBAC so extensively that it can be hardly called RBAC anymore.
+The focus of this paper is on the area of the CAS and mainly on RBAC architecture with CAS elements. As related work covers, the main issue of CAS is no existing standard or efficient best practice solution. There are multiple approaches on ways to incorporate CA elements into RBAC. However, they all suffer from multiple inconveniences. They are often too complicated and therefore significantly decreases one of the main advantages of RBAC - its simplicity to maintain and develop. In some cases, they also demand a lot of computational resources or even change the RBAC so extensively that it can be hardly called RBAC anymore.
 
 A novel approach has been introduced that adds another security constraint in addition to classic permissions tied to roles. The constraint is called security level and it is based on the context. Basically, the level describes how much a user can be trusted. To access resource in application user is required not only to posses permission through roles but also to have corresponding security level. This approach retains the advantages of RBAC and extends them further with CA elements. Although the solution has a few limitations, it brings multiple advantages to support CAS. 
 
-Future studies are desired that will focus on the transfer of security levels to other security architectures. Preliminary studies have shown the potential and flexibility to utilize the advantages. In addition, options to overcome linearity of the levels should be examined as well as how to model more complex context security constraints and generally reduce downsides of the proposed solution.
+Future studies will focus on the transfer of security levels to other security architectures. Preliminary studies have shown the potential and flexibility to utilize the advantages. In addition, options to overcome linearity of the levels should be examined as well as how to model more complex context security constraints and generally reduce downsides of the proposed solution.
 
 %ACKNOWLEDGMENTS are optional
 \section{Acknowledgments}
